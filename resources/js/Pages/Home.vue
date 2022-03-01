@@ -1,5 +1,5 @@
 <template>
-    <Head title="My App - Home"/>
+    <Head title="Home"/>
     <h1>
         Hello
     </h1>

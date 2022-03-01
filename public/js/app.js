@@ -19626,6 +19626,9 @@ _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__.InertiaProgress.init({
         return (0,vue__WEBPACK_IMPORTED_MODULE_1__.h)(App, props);
       }
     }).use(plugin).mount(el);
+  },
+  title: function title(args) {
+    return "My App - ".concat(args);
   }
 });
 

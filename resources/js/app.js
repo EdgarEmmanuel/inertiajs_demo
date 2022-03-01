@@ -22,4 +22,6 @@ createInertiaApp({
             .use(plugin)
             .mount(el)
     },
+
+    title: args => `My App - ${args}`
 })
