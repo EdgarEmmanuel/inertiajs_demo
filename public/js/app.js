@@ -19602,19 +19602,7 @@ var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Log Out");
 
-var _hoisted_8 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "burger"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "line"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "line"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "line"
-  })], -1
-  /* HOISTED */
-  );
-});
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"rightnav v-class-resp\" data-v-7eb004d7><!--                &lt;input type=&quot;text&quot; name=&quot;search&quot; id=&quot;search&quot; placeholder=&quot;Search&quot;&gt;--><!--                &lt;button class=&quot;btn btn-sm&quot;&gt;Search&lt;/button&gt;--> Welcome , Emmanuel Edgar </div><div class=\"burger\" data-v-7eb004d7><div class=\"line\" data-v-7eb004d7></div><div class=\"line\" data-v-7eb004d7></div><div class=\"line\" data-v-7eb004d7></div></div>", 2);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_NavLink = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("NavLink");
@@ -19670,7 +19658,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <div class=\"rightnav v-class-resp\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <input type=\"text\" name=\"search\" id=\"search\" placeholder=\"Search\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <button class=\"btn btn-sm\">Search</button>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            </div>"), _hoisted_8]);
+  })])]), _hoisted_8]);
 }
 
 /***/ }),
@@ -19872,7 +19860,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:wght@700&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n/**{*/\n/*    margin: 0px;*/\n/*    padding: 0px;*/\n/*}*/\n.logo[data-v-7eb004d7]{\n    width: 20%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.logo img[data-v-7eb004d7]{\n    width: 42%;\n    border: 3px solid rgb(245, 245, 245);\n    border-radius:100px;\n}\n.navbar[data-v-7eb004d7] {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    cursor: pointer;\n}\n.background[data-v-7eb004d7]{\n    background:rgba(0, 0, 0, 0.7);\n    background-size: cover;\n    background-blend-mode: darken;\n}\n.nav-list[data-v-7eb004d7]{\n    width: 70%;\n    display: flex;\n    align-items: center;\n}\n.nav-list li[data-v-7eb004d7]{\n    list-style: none;\n    padding: 31px 34px;\n    font-size: 20px;\n    font-family: 'Ubuntu', sans-serif;\n}\n.nav-list li a[data-v-7eb004d7]{\n    text-decoration: none;\n    color: white;\n    padding: 10px;\n    border-radius: 10px;\n}\n.nav-list li button[data-v-7eb004d7]{\n    text-decoration: none;\n    font-weight: bold;\n    color: black;\n    padding: 10px 10px;\n    cursor: pointer;\n}\n.nav-list li a[data-v-7eb004d7]:hover{\n    color: black;\n    background-color: rgb(255, 255, 255);\n}\n.nav-list li a.active[data-v-7eb004d7]{\n    color: red;\n    background-color: rgb(255, 255, 255);\n}\n.rightnav[data-v-7eb004d7]{\n    /* background-color: blue; */\n    width:30%;\n    text-align:right;\n    padding: 0 23px;\n}\n#search[data-v-7eb004d7]{\n    padding: 5px;\n    font-size: 17px;\n    border: 2px solid greenyellow;\n    border-radius: 9px;\n}\n#btn btn-sm a[data-v-7eb004d7]{\n    list-style: none;\n    text-decoration: none;\n    color: white;\n}\n.btn[data-v-7eb004d7]{\n    padding: 8px 20px;\n    margin: 7px 6px;\n    border: 2px solid white;\n    border-radius: 50px;\n    background: none;\n    color: white;\n    cursor: pointer;\n    font-family: 'Ubuntu', sans-serif;\n    font-size: 16px;\n}\n.btn a[data-v-7eb004d7]{\n    text-decoration: none;\n    color: white;\n}\n.btn[data-v-7eb004d7]:hover{\n    text-decoration: none;\n    list-style: none;\n    color: rgb(0, 0, 0);\n    background-color:rgb(0, 255, 191);\n}\n.btn-dark[data-v-7eb004d7]{\n    color: black;\n    border: 2px solid black;\n}\n\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n/**{*/\n/*    margin: 0px;*/\n/*    padding: 0px;*/\n/*}*/\n*[data-v-7eb004d7]{\n    font-family: 'Ubuntu Mono', monospace;\n}\n.logo[data-v-7eb004d7]{\n    width: 20%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.logo img[data-v-7eb004d7]{\n    width: 42%;\n    border: 3px solid rgb(245, 245, 245);\n    border-radius:100px;\n}\n.navbar[data-v-7eb004d7] {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    cursor: pointer;\n}\n.background[data-v-7eb004d7]{\n    background:rgba(0, 0, 0, 0.7);\n    background-size: cover;\n    background-blend-mode: darken;\n}\n.nav-list[data-v-7eb004d7]{\n    width: 70%;\n    display: flex;\n    align-items: center;\n}\n.nav-list li[data-v-7eb004d7]{\n    list-style: none;\n    padding: 31px 34px;\n    font-size: 20px;\n    font-family: 'Ubuntu', sans-serif;\n}\n.nav-list li a[data-v-7eb004d7]{\n    text-decoration: none;\n    color: white;\n    padding: 10px;\n    border-radius: 10px;\n}\n.nav-list li button[data-v-7eb004d7]{\n    text-decoration: none;\n    font-weight: bold;\n    color: black;\n    padding: 10px 10px;\n    cursor: pointer;\n}\n.nav-list li a[data-v-7eb004d7]:hover{\n    color: black;\n    background-color: rgb(255, 255, 255);\n}\n.nav-list li a.active[data-v-7eb004d7]{\n    color: red;\n    background-color: rgb(255, 255, 255);\n}\n.rightnav[data-v-7eb004d7]{\n    /* background-color: blue; */\n    width:30%;\n    text-align:right;\n    padding: 0 23px;\n    font-weight: bold;\n    color: white;\n}\n#search[data-v-7eb004d7]{\n    padding: 5px;\n    font-size: 17px;\n    border: 2px solid greenyellow;\n    border-radius: 9px;\n}\n#btn btn-sm a[data-v-7eb004d7]{\n    list-style: none;\n    text-decoration: none;\n    color: white;\n}\n.btn[data-v-7eb004d7]{\n    padding: 8px 20px;\n    margin: 7px 6px;\n    border: 2px solid white;\n    border-radius: 50px;\n    background: none;\n    color: white;\n    cursor: pointer;\n    font-family: 'Ubuntu', sans-serif;\n    font-size: 16px;\n}\n.btn a[data-v-7eb004d7]{\n    text-decoration: none;\n    color: white;\n}\n.btn[data-v-7eb004d7]:hover{\n    text-decoration: none;\n    list-style: none;\n    color: rgb(0, 0, 0);\n    background-color:rgb(0, 255, 191);\n}\n.btn-dark[data-v-7eb004d7]{\n    color: black;\n    border: 2px solid black;\n}\n\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

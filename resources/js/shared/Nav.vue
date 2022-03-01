@@ -19,10 +19,11 @@
                 </li>
                 <li><Link href="/logout" method="post" as="button">Log Out</Link></li>
             </ul>
-<!--            <div class="rightnav v-class-resp">-->
+            <div class="rightnav v-class-resp">
 <!--                <input type="text" name="search" id="search" placeholder="Search">-->
 <!--                <button class="btn btn-sm">Search</button>-->
-<!--            </div>-->
+                Welcome , Emmanuel Edgar
+            </div>
             <div class="burger">
                 <div class="line"></div>
                 <div class="line"></div>
@@ -47,11 +48,14 @@ export default {
 
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:wght@700&display=swap");
 
+
 /**{*/
 /*    margin: 0px;*/
 /*    padding: 0px;*/
 /*}*/
-
+*{
+    font-family: 'Ubuntu Mono', monospace;
+}
 .logo{
     width: 20%;
     display: flex;
@@ -130,6 +134,8 @@ export default {
     width:30%;
     text-align:right;
     padding: 0 23px;
+    font-weight: bold;
+    color: white;
 }
 
 
