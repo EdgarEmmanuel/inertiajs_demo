@@ -1,4 +1,5 @@
 <template>
+    <Head title="My Inertia App"/>
     <div>
         <header>
             <Nav/>
@@ -10,11 +11,13 @@
 
 <script>
 import Nav from './Nav';
+import {Head} from "@inertiajs/inertia-vue3";
 
 export default {
     name: "Layout",
     components:{
-        Nav
+        Nav,
+        Head
     }
 }
 </script>
