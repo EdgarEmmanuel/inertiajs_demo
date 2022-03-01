@@ -17,6 +17,7 @@
 
     export default {
         name: "Users",
+        // thanks to the below attribute all the component data will be wrapped into children of the layout
         layout: Layout,
         components: { Nav, Link, },
         props: {
