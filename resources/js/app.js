@@ -10,8 +10,8 @@ InertiaProgress.init({
 });
 
 createInertiaApp({
-    resolve: name => {
-        let page = require(`./Pages/${name}`).default;
+    resolve: async name => {
+        let page = (await import(`./Pages/${name}`)).default;
 
         page.layout ??= Layout;
 
