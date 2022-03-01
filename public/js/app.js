@@ -19602,7 +19602,23 @@ var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Log Out");
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"rightnav v-class-resp\" data-v-7eb004d7><!--                &lt;input type=&quot;text&quot; name=&quot;search&quot; id=&quot;search&quot; placeholder=&quot;Search&quot;&gt;--><!--                &lt;button class=&quot;btn btn-sm&quot;&gt;Search&lt;/button&gt;--> Welcome , Emmanuel Edgar </div><div class=\"burger\" data-v-7eb004d7><div class=\"line\" data-v-7eb004d7></div><div class=\"line\" data-v-7eb004d7></div><div class=\"line\" data-v-7eb004d7></div></div>", 2);
+var _hoisted_8 = {
+  "class": "rightnav v-class-resp"
+};
+
+var _hoisted_9 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "burger"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "line"
+  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "line"
+  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "line"
+  })], -1
+  /* HOISTED */
+  );
+});
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_NavLink = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("NavLink");
@@ -19658,7 +19674,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })])]), _hoisted_8]);
+  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <input type=\"text\" name=\"search\" id=\"search\" placeholder=\"Search\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <button class=\"btn btn-sm\">Search</button>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Welcome , " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.auth.user.username), 1
+  /* TEXT */
+  )]), _hoisted_9]);
 }
 
 /***/ }),

@@ -22,7 +22,7 @@
             <div class="rightnav v-class-resp">
 <!--                <input type="text" name="search" id="search" placeholder="Search">-->
 <!--                <button class="btn btn-sm">Search</button>-->
-                Welcome , Emmanuel Edgar
+                Welcome , {{$page.props.auth.user.username}}
             </div>
             <div class="burger">
                 <div class="line"></div>
