@@ -22,7 +22,7 @@
             <div class="rightnav v-class-resp">
 <!--                <input type="text" name="search" id="search" placeholder="Search">-->
 <!--                <button class="btn btn-sm">Search</button>-->
-                Welcome , {{$page.props.auth.user.username}}
+                Welcome , {{username}}
             </div>
             <div class="burger">
                 <div class="line"></div>
@@ -40,6 +40,11 @@ export default {
     components: {
         Link,
         NavLink,
+    },
+    computed:{
+        username(){
+            return this.$page.props.auth.user.username;
+        }
     }
 }
 </script>
