@@ -19731,9 +19731,11 @@ _inertiajs_progress__WEBPACK_IMPORTED_MODULE_2__.InertiaProgress.init({
 });
 (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.createInertiaApp)({
   resolve: function resolve(name) {
+    var _page$layout;
+
     var page = __webpack_require__("./resources/js/Pages sync recursive ^\\.\\/.*$")("./".concat(name))["default"];
 
-    page.layout = _shared_Layout__WEBPACK_IMPORTED_MODULE_3__["default"];
+    (_page$layout = page.layout) !== null && _page$layout !== void 0 ? _page$layout : page.layout = _shared_Layout__WEBPACK_IMPORTED_MODULE_3__["default"];
     return page;
   },
   setup: function setup(_ref) {

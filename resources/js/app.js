@@ -13,7 +13,7 @@ createInertiaApp({
     resolve: name => {
         let page = require(`./Pages/${name}`).default;
 
-        page.layout = Layout;
+        page.layout ??= Layout;
 
         return page;
     },
