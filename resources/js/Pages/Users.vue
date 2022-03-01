@@ -1,5 +1,4 @@
 <template>
-    <Layout>
         <div>
             <h1>
                 Users
@@ -9,7 +8,6 @@
             </p>
             <Link preserve-scroll href="/users">Refresh</Link>
         </div>
-    </Layout>
 </template>
 
 <script>
@@ -19,7 +17,8 @@
 
     export default {
         name: "Users",
-        components: { Nav, Link, Layout},
+        layout: Layout,
+        components: { Nav, Link, },
         props: {
             time: String,
         }
