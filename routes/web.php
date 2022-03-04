@@ -20,8 +20,11 @@ Route::get('/', function () {
 
 Route::get('/users', function () {
     //return view('welcome');
+    $users = \App\Models\User::all();
+
     return \Inertia\Inertia::render("Users",[
         "time" => now()->format("Y - m - d h:m:s"),
+        "users" => $users
     ]);
 });
 
