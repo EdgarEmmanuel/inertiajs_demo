@@ -22,7 +22,8 @@ Route::get('/users', function () {
     //return view('welcome');
     $users = \App\Models\User::all()->map(fn ($user) => [
         "name" => $user->name,
-        "email" => $user->email
+        "email" => $user->email,
+        "id" => $user->id,
     ]);
 
     return \Inertia\Inertia::render("Users",[

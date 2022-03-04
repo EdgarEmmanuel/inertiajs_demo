@@ -77,9 +77,6 @@ var _hoisted_7 = /*#__PURE__*/_withScopeId(function () {
     "class": "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
   }, "Name"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
     scope: "col",
-    "class": "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-  }, "Title"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-    scope: "col",
     "class": "relative px-6 py-3"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
     "class": "sr-only"
@@ -119,18 +116,10 @@ var _hoisted_13 = {
 var _hoisted_14 = {
   "class": "text-sm text-gray-500"
 };
-
-var _hoisted_15 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-    "class": "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    href: "#",
-    "class": "text-indigo-600 hover:text-indigo-900"
-  }, "Edit")], -1
-  /* HOISTED */
-  );
-});
-
+var _hoisted_15 = {
+  "class": "px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+};
+var _hoisted_16 = ["href"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <tr>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <td class=\"px-6 py-4 whitespace-nowrap\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div class=\"flex items-center\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <div class=\"flex-shrink-0 h-10 w-10\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <img class=\"h-10 w-10 rounded-full\" src=\"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60\" alt=\"\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <div class=\"ml-4\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <div class=\"text-sm font-medium text-gray-900\">Jane Cooper</div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                                <div class=\"text-sm text-gray-500\">jane.cooper@example.com</div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <td class=\"px-6 py-4 whitespace-nowrap\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div class=\"text-sm text-gray-900\">Regional Paradigm Technician</div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <div class=\"text-sm text-gray-500\">Optimization</div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <td class=\"px-6 py-4 whitespace-nowrap text-right text-sm font-medium\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <a href=\"#\" class=\"text-indigo-600 hover:text-indigo-900\">Edit</a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </tr>"), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.users, function (user) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
@@ -139,7 +128,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.email), 1
     /* TEXT */
-    )])])]), _hoisted_15]);
+    )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+      href: "/users/".concat(user.id, "/edit"),
+      "class": "text-indigo-600 hover:text-indigo-900"
+    }, "Edit", 8
+    /* PROPS */
+    , _hoisted_16)])]);
   }), 128
   /* KEYED_FRAGMENT */
   )), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" More people... ")])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <p >"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                The Time is {{ time }}"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            </p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <Link preserve-scroll href=\"/users\">Refresh</Link>")]);
