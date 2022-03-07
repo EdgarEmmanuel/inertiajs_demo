@@ -20,7 +20,11 @@ Route::get('/', function () {
 
 Route::get('/users', function () {
     //return view('welcome');
-    $users = \App\Models\User::paginate(20);
+    $users = \App\Models\User::paginate(20)->through(fn($user) => [
+        "id" => $user->id,
+        "name" => $user->name,
+        "email" => $user->email,
+    ]);
 
     return \Inertia\Inertia::render("Users",[
         "time" => now()->format("Y - m - d h:m:s"),
