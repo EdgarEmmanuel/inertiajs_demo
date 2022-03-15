@@ -31,7 +31,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   name: "Users",
   data: function data() {
     return {
-      search: ''
+      search: this.filters
     };
   },
   watch: {
@@ -92,7 +92,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   props: {
     time: String,
-    users: Object
+    users: Object,
+    filters: String
   }
 });
 

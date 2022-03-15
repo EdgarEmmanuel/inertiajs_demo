@@ -26,15 +26,18 @@ Route::get('/users', function () {
             $finaLSearch = "%{$search}%";
             $query->where("name", "like", $finaLSearch);
         })
-        ->paginate(20)->through(fn($user) => [
-        "id" => $user->id,
-        "name" => $user->name,
-        "email" => $user->email,
-    ]);
+        ->paginate(20)
+        ->withQueryString()
+        ->through(fn($user) => [
+            "id" => $user->id,
+            "name" => $user->name,
+            "email" => $user->email,
+        ]);
 
     return \Inertia\Inertia::render("Users",[
         "time" => now()->format("Y - m - d h:m:s"),
-        "users" => $users
+        "users" => $users,
+        "filters" => $thereIsSearchKeyword,
     ]);
 });
 

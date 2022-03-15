@@ -84,7 +84,7 @@
         name: "Users",
         data() {
             return {
-                search: ''
+                search: this.filters
             }
         },
         watch: {
@@ -118,6 +118,7 @@
         props: {
             time: String,
             users: Object,
+            filters: String
         }
     }
 </script>
