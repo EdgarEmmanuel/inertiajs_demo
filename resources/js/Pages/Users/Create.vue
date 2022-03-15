@@ -1,19 +1,19 @@
 <template>
     <Head title="My Inertia App - Create User"/>
-    <h1 class="text-3xl">
-        I am here to create a User
-    </h1>
 
     <!--    start form -->
 
 
 
-    <div class="mt-10 sm:mt-0">
+    <div class="mt-10 sm:mt-0 p-10">
         <div class="md:grid md:grid-cols-3 md:gap-6">
             <div class="md:col-span-1">
                 <div class="px-4 sm:px-0">
                     <h3 class="text-lg font-medium leading-6 text-gray-900">Personal Information</h3>
                     <p class="mt-1 text-sm text-gray-600">Use a permanent address where you can receive mail.</p>
+                    <h1 class="text-3xl">
+                        I am here to create a User
+                    </h1>
                 </div>
             </div>
             <div class="mt-5 md:mt-0 md:col-span-2">
@@ -24,19 +24,19 @@
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="first-name" class="block text-sm font-medium text-gray-700">Name</label>
                                     <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
-                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required/>
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-3">
-                                    <label for="last-name" class="block text-sm font-medium text-gray-700">Email</label>
-                                    <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
-                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                    <input type="email" name="email" id="email" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
+                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required/>
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-4">
-                                    <label for="email-address" class="block text-sm font-medium text-gray-700">Password</label>
-                                    <input type="text" name="email-address" id="email-address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
-                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                                    <input type="password" name="password" id="password" autocomplete="password" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
+                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required/>
                                 </div>
 
 
