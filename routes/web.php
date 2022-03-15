@@ -18,7 +18,7 @@ Route::get('/', function () {
     return \Inertia\Inertia::render("Home");
 });
 
-Route::get('/users', function () {
+Route::get('/users/index', function () {
     //return view('welcome');
     $thereIsSearchKeyword = \Illuminate\Support\Facades\Request::input('search');
     $users = \App\Models\User::query()

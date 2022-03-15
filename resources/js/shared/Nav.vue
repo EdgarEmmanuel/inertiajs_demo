@@ -8,13 +8,18 @@
                     </NavLink>
                 </li>
                 <li>
-                    <Link href="/users" :class="{'active': $page.url.startsWith('/users')}">
+                    <Link href="/users/index" :class="{'active': $page.url.startsWith('/users/index')}">
                         Users
                     </Link>
                 </li>
                 <li>
                     <NavLink href="/settings" :active="$page.url.startsWith('/settings')">
                         Settings
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink href='/users/create' :active="$page.url.startsWith('/users/create')">
+                        CreateUser
                     </NavLink>
                 </li>
                 <li><Link href="/logout" method="post" as="button">Log Out</Link></li>
