@@ -17,25 +17,25 @@
                 </div>
             </div>
             <div class="mt-5 md:mt-0 md:col-span-2">
-                <form action="#" method="POST">
+                <form @submit.prevent="submit">
                     <div class="shadow overflow-hidden sm:rounded-md">
                         <div class="px-4 py-5 bg-white sm:p-6">
                             <div class="grid grid-cols-6 gap-6">
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="first-name" class="block text-sm font-medium text-gray-700">Name</label>
-                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
+                                    <input type="text" v-model="form.name" name="name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
                                     block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required/>
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                                    <input type="email" name="email" id="email" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
+                                    <input type="email" v-model="form.email" name="email" id="email" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
                                     block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required/>
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-4">
                                     <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                                    <input type="password" name="password" id="password" autocomplete="password" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
+                                    <input type="password" v-model="form.password" name="password" id="password" autocomplete="password" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
                                     block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required/>
                                 </div>
 
@@ -60,15 +60,29 @@
 </template>
 
 <script>
+import { reactive } from 'vue';
+import {Head} from "@inertiajs/inertia-vue3";
+
 export default {
     name: "Create",
+    components:{
+        Head
+    },
     data() {
         return {
-            UserName: '',
-            UserEmail: '',
-            UserPassword: ''
+            form:{
+                name: '',
+                email: '',
+                password: '',
+            }
         }
-    }
+    },
+    methods: {
+        submit() {
+            //console.log("data");
+            this.$inertia.post('/users', this.form)
+        },
+    },
 }
 </script>
 

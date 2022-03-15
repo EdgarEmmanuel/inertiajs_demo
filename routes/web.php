@@ -39,11 +39,25 @@ Route::get('/users/index', function () {
         "users" => $users,
         "filters" => $thereIsSearchKeyword,
     ]);
-});
+})->name("user_index");
 
 Route::get('/settings', function () {
     //return view('welcome');
     return \Inertia\Inertia::render("Settings");
+});
+
+Route::post('/users', function () {
+    $allData = \Illuminate\Support\Facades\Request::validate([
+        "name" => "required|string",
+        "email" => "required|string",
+        "password" => "required|string|max:25"
+    ]);
+
+    // create the user
+    \App\Models\User::create($allData);
+
+    //redirect
+    return redirect("/users/index");
 });
 
 

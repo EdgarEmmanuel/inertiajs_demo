@@ -96,7 +96,7 @@ export default {
     methods: {
         async getDataForSearch(search) {
             this.$inertia.get(
-                "/users",
+                "/users/index",
                 {
                     search: search
                 },
