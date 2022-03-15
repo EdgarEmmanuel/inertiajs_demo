@@ -20,7 +20,13 @@ Route::get('/', function () {
 
 Route::get('/users', function () {
     //return view('welcome');
-    $users = \App\Models\User::paginate(20)->through(fn($user) => [
+    $thereIsSearchKeyword = \Illuminate\Support\Facades\Request::input('search');
+    $users = \App\Models\User::query()
+        ->when($thereIsSearchKeyword, function ($query, $search){
+            $finaLSearch = "%{$search}%";
+            $query->where("name", "like", $finaLSearch);
+        })
+        ->paginate(20)->through(fn($user) => [
         "id" => $user->id,
         "name" => $user->name,
         "email" => $user->email,
