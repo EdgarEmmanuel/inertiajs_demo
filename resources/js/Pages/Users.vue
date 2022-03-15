@@ -101,7 +101,8 @@
                         search: search
                     },
                     {
-                        preserveState: true
+                        preserveState: true,
+                        replace: true
                     }
                 );
             }

@@ -52,7 +52,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _this.$inertia.get("/users", {
                   search: search
                 }, {
-                  preserveState: true
+                  preserveState: true,
+                  replace: true
                 });
 
               case 1:
