@@ -2,7 +2,7 @@
 <!--    start filtering input-->
     <div class="flex justify-between p-10 mb-6">
         <h1 class="text-3xl">Users</h1>
-        <input type="text" placeholder="search..." class="border px-2 rounded-lg"/>
+        <input v-model="search" type="text" placeholder="search..." class="border px-2 rounded-lg"/>
     </div>
 <!--    end filtering input -->
         <div class="container p-2 mt-10">
@@ -82,6 +82,36 @@
 
     export default {
         name: "Users",
+        data() {
+            return {
+                search: ''
+            }
+        },
+        watch: {
+            // whenever question changes, this function will run
+            search(newSearch, oldSearch) {
+                this.$inertia.get(
+                    "/users",
+                    {
+                        search: newSearch
+                    },
+                    {
+                        preserveState: true
+                    }
+                );
+            }
+        },
+        methods: {
+            async getDataForSearch() {
+                this.answer = 'Thinking...'
+                try {
+                    const res = await fetch('https://yesno.wtf/api')
+                    this.answer = (await res.json()).answer
+                } catch (error) {
+                    this.answer = 'Error! Could not reach the API. ' + error
+                }
+            }
+        },
         // thanks to the below attribute all the component data will be wrapped into children of the layout
         layout: Layout,
         components: { Nav, Link, Paginated},
