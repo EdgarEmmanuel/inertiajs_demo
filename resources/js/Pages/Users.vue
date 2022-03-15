@@ -1,5 +1,11 @@
 <template>
-        <div class="container">
+<!--    start filtering input-->
+    <div class="flex justify-between p-10 mb-6">
+        <h1 class="text-3xl">Users</h1>
+        <input type="text" placeholder="search..." class="border px-2 rounded-lg"/>
+    </div>
+<!--    end filtering input -->
+        <div class="container p-2 mt-10">
             <div class="flex flex-col">
                 <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
