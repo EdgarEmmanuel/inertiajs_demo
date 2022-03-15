@@ -34,7 +34,7 @@ Route::get('/users', function () {
             "email" => $user->email,
         ]);
 
-    return \Inertia\Inertia::render("Users",[
+    return \Inertia\Inertia::render("Users/Index",[
         "time" => now()->format("Y - m - d h:m:s"),
         "users" => $users,
         "filters" => $thereIsSearchKeyword,
@@ -44,6 +44,12 @@ Route::get('/users', function () {
 Route::get('/settings', function () {
     //return view('welcome');
     return \Inertia\Inertia::render("Settings");
+});
+
+
+Route::get('/users/create', function () {
+    //return view('welcome');
+    return \Inertia\Inertia::render("Users/Create");
 });
 
 Route::post('/logout', function () {
