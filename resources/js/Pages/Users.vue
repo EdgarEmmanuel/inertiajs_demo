@@ -90,26 +90,20 @@
         watch: {
             // whenever question changes, this function will run
             search(newSearch, oldSearch) {
+                this.getDataForSearch(newSearch);
+            }
+        },
+        methods: {
+            async getDataForSearch(search) {
                 this.$inertia.get(
                     "/users",
                     {
-                        search: newSearch
+                        search: search
                     },
                     {
                         preserveState: true
                     }
                 );
-            }
-        },
-        methods: {
-            async getDataForSearch() {
-                this.answer = 'Thinking...'
-                try {
-                    const res = await fetch('https://yesno.wtf/api')
-                    this.answer = (await res.json()).answer
-                } catch (error) {
-                    this.answer = 'Error! Could not reach the API. ' + error
-                }
             }
         },
         // thanks to the below attribute all the component data will be wrapped into children of the layout

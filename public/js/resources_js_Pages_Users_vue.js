@@ -37,49 +37,30 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   watch: {
     // whenever question changes, this function will run
     search: function search(newSearch, oldSearch) {
-      this.$inertia.get("/users", {
-        search: newSearch
-      }, {
-        preserveState: true
-      });
+      this.getDataForSearch(newSearch);
     }
   },
   methods: {
-    getDataForSearch: function getDataForSearch() {
+    getDataForSearch: function getDataForSearch(search) {
       var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _this.answer = 'Thinking...';
-                _context.prev = 1;
-                _context.next = 4;
-                return fetch('https://yesno.wtf/api');
+                _this.$inertia.get("/users", {
+                  search: search
+                }, {
+                  preserveState: true
+                });
 
-              case 4:
-                res = _context.sent;
-                _context.next = 7;
-                return res.json();
-
-              case 7:
-                _this.answer = _context.sent.answer;
-                _context.next = 13;
-                break;
-
-              case 10:
-                _context.prev = 10;
-                _context.t0 = _context["catch"](1);
-                _this.answer = 'Error! Could not reach the API. ' + _context.t0;
-
-              case 13:
+              case 1:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[1, 10]]);
+        }, _callee);
       }))();
     }
   },
