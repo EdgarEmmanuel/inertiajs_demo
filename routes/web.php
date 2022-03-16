@@ -62,7 +62,7 @@ Route::post('/users', function () {
 
 
 Route::get('/users/create', function () {
-    sleep(3);
+    //sleep(3);
     //return view('welcome');
     return \Inertia\Inertia::render("Users/Create");
 });
