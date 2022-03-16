@@ -24,19 +24,22 @@
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="first-name" class="block text-sm font-medium text-gray-700">Name</label>
                                     <input type="text" v-model="form.name" name="name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
-                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required/>
+                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"/>
+                                    <div v-if="$page.props.errors.name" v-text="$page.props.errors.name" class="text-red-500"></div>
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                                     <input type="email" v-model="form.email" name="email" id="email" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
-                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required/>
+                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"/>
+                                    <div v-if="$page.props.errors.email" v-text="$page.props.errors.email" class="text-red-500"></div>
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-4">
                                     <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                                     <input type="password" v-model="form.password" name="password" id="password" autocomplete="password" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
-                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required/>
+                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"/>
+                                    <div v-if="$page.props.errors.password" v-text="$page.props.errors.password" class="text-red-500"></div>
                                 </div>
 
 
