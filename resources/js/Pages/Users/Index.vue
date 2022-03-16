@@ -82,6 +82,8 @@ import Layout from "../../shared/Layout";
 import Nav from "../../shared/Nav";
 import Paginated from "../../shared/Paginated";
 import {Link} from "@inertiajs/inertia-vue3";
+import {throttle} from "lodash/function";
+import {debounce} from "lodash/function";
 
 export default {
     name: "Index",
@@ -97,18 +99,18 @@ export default {
         }
     },
     methods: {
-        async getDataForSearch(search) {
-            this.$inertia.get(
-                "/users/index",
-                {
-                    search: search
-                },
-                {
-                    preserveState: true,
-                    replace: true
-                }
-            );
-        }
+        getDataForSearch: throttle(function(search){
+                this.$inertia.get(
+                    "/users/index",
+                    {
+                        search: search
+                    },
+                    {
+                        preserveState: true,
+                        replace: true
+                    }
+                );
+            },500)
     },
     // thanks to the below attribute all the component data will be wrapped into children of the layout
     layout: Layout,
