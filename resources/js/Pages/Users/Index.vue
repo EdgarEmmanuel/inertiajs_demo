@@ -1,7 +1,10 @@
 <template>
     <!--    start filtering input-->
     <div class="flex justify-between p-10 mb-6">
-        <h1 class="text-3xl">Users</h1>
+        <div class="flex justify-between items-center">
+            <h1 class="text-3xl">Users</h1>
+            <a href="/users/create" class="ml-10 border px-2 rounded-full">Create User</a>
+        </div>
         <input v-model="search" type="text" placeholder="search..." class="border px-2 rounded-lg"/>
     </div>
     <!--    end filtering input -->
