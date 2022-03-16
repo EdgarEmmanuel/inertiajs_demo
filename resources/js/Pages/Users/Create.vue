@@ -24,14 +24,14 @@
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="first-name" class="block text-sm font-medium text-gray-700">Name</label>
                                     <input type="text" v-model="form.name" name="name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
-                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"/>
+                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required/>
                                     <div v-if="$page.props.errors.name" v-text="$page.props.errors.name" class="text-red-500"></div>
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                                     <input type="email" v-model="form.email" name="email" id="email" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500
-                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"/>
+                                    block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required/>
                                     <div v-if="$page.props.errors.email" v-text="$page.props.errors.email" class="text-red-500"></div>
                                 </div>
 
@@ -48,8 +48,10 @@
                         <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                             <button type="submit"
                                     class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md
-                                     text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                Save</button>
+                                     text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            :disabled="processing">
+                                Save
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -73,7 +75,8 @@ export default {
     },
     data() {
         return {
-            form:{
+            processing: false,
+            form: {
                 name: '',
                 email: '',
                 password: '',
@@ -83,7 +86,14 @@ export default {
     methods: {
         submit() {
             //console.log("data");
-            this.$inertia.post('/users', this.form)
+            this.$inertia.post('/users', this.form, {
+                onStart: () => {
+                    this.processing = true;
+                },
+                onFinish: () => {
+                    this.processing = false;
+                }
+            })
         },
     },
 }
