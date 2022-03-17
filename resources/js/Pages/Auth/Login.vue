@@ -21,14 +21,16 @@
 
                                 <div class="col-span-6 sm:col-span-4">
                                     <label for="email-address" class="block text-sm font-medium text-gray-700">Email address</label>
-                                    <input type="text" name="email-address" id="email-address" autocomplete="email"
+                                    <input v-model="form.email" type="text" name="email-address" id="email-address" autocomplete="email"
                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                                    <div v-if="$page.props.errors.email" v-text="$page.props.errors.email" class="text-red-500"></div>
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-4">
                                     <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                                    <input type="password" name="password" id="password" autocomplete="family-name"
+                                    <input v-model="form.password" type="password" name="password" id="password" autocomplete="family-name"
                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                                    <div v-if="$page.props.errors.email" v-text="$page.props.errors.email" class="text-red-500"></div>
                                 </div>
 
 
@@ -36,7 +38,8 @@
                         </div>
                         <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white
-                             bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">SIGN IN</button>
+                             bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                    :disabled="processing">SIGN IN</button>
                         </div>
                     </div>
                 </form>
@@ -50,8 +53,23 @@
 import {Head} from "@inertiajs/inertia-vue3";
 export default {
     name: "Login",
+    layout: null,
+    data() {
+        return {
+            processing: false,
+            form: {
+                email: '',
+                password: '',
+            }
+        }
+    },
     components:{
         Head
+    },
+    methods:{
+        signIn(){
+
+        }
     }
 }
 </script>
