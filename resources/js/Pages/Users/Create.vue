@@ -10,9 +10,6 @@
             <div class="md:col-span-1">
                 <div class="px-4 sm:px-0">
 <!--                    <h3 class="text-lg font-medium leading-6 text-gray-900">Personal Information</h3>-->
-                    <p class="mt-1 text-sm text-gray-600 mb-4 border rounded-lg">
-                        <a href="/login">Sign In</a>
-                    </p>
                     <h1 class="text-3xl">
                         I am here to create a User
                     </h1>
@@ -72,7 +69,6 @@ import {Head} from "@inertiajs/inertia-vue3";
 
 export default {
     name: "Create",
-    layout: null,
     components:{
         Head
     },

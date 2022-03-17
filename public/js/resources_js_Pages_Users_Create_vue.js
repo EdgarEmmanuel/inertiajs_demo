@@ -17,7 +17,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Create",
-  layout: null,
   components: {
     Head: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.Head
   },
@@ -69,7 +68,15 @@ var _hoisted_2 = {
   "class": "md:grid md:grid-cols-3 md:gap-6"
 };
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"md:col-span-1\"><div class=\"px-4 sm:px-0\"><!--                    &lt;h3 class=&quot;text-lg font-medium leading-6 text-gray-900&quot;&gt;Personal Information&lt;/h3&gt;--><p class=\"mt-1 text-sm text-gray-600 mb-4 border rounded-lg\"><a href=\"/login\">Sign In</a></p><h1 class=\"text-3xl\"> I am here to create a User </h1></div></div>", 1);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "md:col-span-1"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "px-4 sm:px-0"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <h3 class=\"text-lg font-medium leading-6 text-gray-900\">Personal Information</h3>"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+  "class": "text-3xl"
+}, " I am here to create a User ")])], -1
+/* HOISTED */
+);
 
 var _hoisted_4 = {
   "class": "mt-5 md:mt-0 md:col-span-2"
