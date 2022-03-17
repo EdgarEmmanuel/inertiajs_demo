@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('login', [\App\Http\Controllers\LoginController::class,'create'])->name('login');
+
 Route::middleware('auth')->group(function () {
 
 
