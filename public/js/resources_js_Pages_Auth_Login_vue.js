@@ -65,7 +65,7 @@ var _hoisted_2 = {
   "class": "md:grid md:grid-cols-3 md:gap-6 p-10"
 };
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"md:col-span-1\"><div class=\"px-4 sm:px-0\"><p class=\"mt-1 text-sm text-gray-600 mb-4 border rounded-lg\"><a href=\"/users/create\">Sign Up</a></p><h3 class=\"text-lg font-medium leading-6 text-gray-900\">SIGN IN</h3></div></div>", 1);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"md:col-span-1\"><div class=\"px-4 sm:px-0\"><p class=\"mt-1 text-sm text-gray-600 mb-4 border rounded-lg\"><a href=\"/signup\">Sign Up</a></p><h3 class=\"text-lg font-medium leading-6 text-gray-900\">SIGN IN</h3></div></div>", 1);
 
 var _hoisted_4 = {
   "class": "mt-5 md:mt-0 md:col-span-2"

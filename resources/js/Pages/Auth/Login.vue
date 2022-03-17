@@ -7,7 +7,7 @@
             <div class="md:col-span-1">
                 <div class="px-4 sm:px-0">
                     <p class="mt-1 text-sm text-gray-600 mb-4 border rounded-lg">
-                        <a href="/users/create">Sign Up</a>
+                        <a href="/signup">Sign Up</a>
                     </p>
                     <h3 class="text-lg font-medium leading-6 text-gray-900">SIGN IN</h3>
                 </div>
