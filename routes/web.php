@@ -22,6 +22,20 @@ Route::get('/users/create', function () {
     return \Inertia\Inertia::render("Users/Create");
 });
 
+Route::post('/users', function () {
+    $allData = \Illuminate\Support\Facades\Request::validate([
+        "name" => "required|string",
+        "email" => "required|string",
+        "password" => "required|string|max:25"
+    ]);
+
+    // create the user
+    \App\Models\User::create($allData);
+
+    //redirect
+    return redirect("login");
+});
+
 Route::middleware('auth')->group(function () {
 
 
@@ -58,19 +72,7 @@ Route::middleware('auth')->group(function () {
         return \Inertia\Inertia::render("Settings");
     });
 
-    Route::post('/users', function () {
-        $allData = \Illuminate\Support\Facades\Request::validate([
-            "name" => "required|string",
-            "email" => "required|string",
-            "password" => "required|string|max:25"
-        ]);
 
-        // create the user
-        \App\Models\User::create($allData);
-
-        //redirect
-        return redirect("/users/index");
-    });
 
     Route::post('/logout', function () {
         dd("logout users");
