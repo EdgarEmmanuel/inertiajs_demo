@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="mt-5 md:mt-0 md:col-span-2">
-                <form action="#" method="POST">
+                <form @submit.prevent="signIn">
                     <div class="shadow overflow-hidden sm:rounded-md">
                         <div class="px-4 py-5 bg-white sm:p-6">
                             <div class="grid grid-cols-6 gap-6">
@@ -68,7 +68,14 @@ export default {
     },
     methods:{
         signIn(){
-
+            this.$inertia.post('/login', this.form, {
+                onStart: () => {
+                    this.processing = true;
+                },
+                onFinish: () => {
+                    this.processing = false;
+                }
+            })
         }
     }
 }
