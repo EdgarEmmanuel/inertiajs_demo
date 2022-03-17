@@ -13,60 +13,66 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    //return view('welcome');
-    return \Inertia\Inertia::render("Home");
-});
+Route::middleware('auth')->group(function () {
 
-Route::get('/users/index', function () {
-    //return view('welcome');
-    $thereIsSearchKeyword = \Illuminate\Support\Facades\Request::input('search');
-    $users = \App\Models\User::query()
-        ->when($thereIsSearchKeyword, function ($query, $search){
-            $finaLSearch = "%{$search}%";
-            $query->where("name", "like", $finaLSearch);
-        })
-        ->paginate(20)
-        ->withQueryString()
-        ->through(fn($user) => [
-            "id" => $user->id,
-            "name" => $user->name,
-            "email" => $user->email,
+
+    Route::get('/', function () {
+        //return view('welcome');
+        return \Inertia\Inertia::render("Home");
+    });
+
+    Route::get('/users/index', function () {
+        //return view('welcome');
+        $thereIsSearchKeyword = \Illuminate\Support\Facades\Request::input('search');
+        $users = \App\Models\User::query()
+            ->when($thereIsSearchKeyword, function ($query, $search){
+                $finaLSearch = "%{$search}%";
+                $query->where("name", "like", $finaLSearch);
+            })
+            ->paginate(20)
+            ->withQueryString()
+            ->through(fn($user) => [
+                "id" => $user->id,
+                "name" => $user->name,
+                "email" => $user->email,
+            ]);
+
+        return \Inertia\Inertia::render("Users/Index",[
+            "time" => now()->format("Y - m - d h:m:s"),
+            "users" => $users,
+            "filters" => $thereIsSearchKeyword,
+        ]);
+    })->name("user_index");
+
+    Route::get('/settings', function () {
+        //return view('welcome');
+        return \Inertia\Inertia::render("Settings");
+    });
+
+    Route::post('/users', function () {
+        $allData = \Illuminate\Support\Facades\Request::validate([
+            "name" => "required|string",
+            "email" => "required|string",
+            "password" => "required|string|max:25"
         ]);
 
-    return \Inertia\Inertia::render("Users/Index",[
-        "time" => now()->format("Y - m - d h:m:s"),
-        "users" => $users,
-        "filters" => $thereIsSearchKeyword,
-    ]);
-})->name("user_index");
+        // create the user
+        \App\Models\User::create($allData);
 
-Route::get('/settings', function () {
-    //return view('welcome');
-    return \Inertia\Inertia::render("Settings");
-});
-
-Route::post('/users', function () {
-    $allData = \Illuminate\Support\Facades\Request::validate([
-        "name" => "required|string",
-        "email" => "required|string",
-        "password" => "required|string|max:25"
-    ]);
-
-    // create the user
-    \App\Models\User::create($allData);
-
-    //redirect
-    return redirect("/users/index");
-});
+        //redirect
+        return redirect("/users/index");
+    });
 
 
-Route::get('/users/create', function () {
-    //sleep(3);
-    //return view('welcome');
-    return \Inertia\Inertia::render("Users/Create");
-});
+    Route::get('/users/create', function () {
+        //sleep(3);
+        //return view('welcome');
+        return \Inertia\Inertia::render("Users/Create");
+    });
 
-Route::post('/logout', function () {
-    dd("logout users");
+    Route::post('/logout', function () {
+        dd("logout users");
+    });
+
+
 });
