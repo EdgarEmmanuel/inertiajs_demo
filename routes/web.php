@@ -60,6 +60,9 @@ Route::middleware('auth')->group(function () {
                 "id" => $user->id,
                 "name" => $user->name,
                 "email" => $user->email,
+                "can" => [
+                    "edit" => \Illuminate\Support\Facades\Auth::user()->can('update', $user)
+                ]
             ]);
 
         return \Inertia\Inertia::render("Users/Index",[
@@ -83,7 +86,7 @@ Route::middleware('auth')->group(function () {
         //sleep(3);
         //return view('welcome');
         return \Inertia\Inertia::render("Users/Create");
-    });
+    })->middleware('can:create, App\Models\User');
 
 
 

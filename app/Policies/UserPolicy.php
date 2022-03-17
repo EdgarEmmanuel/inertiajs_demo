@@ -52,7 +52,9 @@ class UserPolicy
      */
     public function update(User $user, User $model)
     {
-        //
+        //just for the sake of the demo
+
+        return (bool)mt_rand(0,1);
     }
 
     /**
