@@ -22,7 +22,9 @@
                         CreateUser
                     </NavLink>
                 </li>
-                <li><Link href="/logout" method="post" as="button">Log Out</Link></li>
+                <li>
+                    <NavLink href="/logout" method="post" as="button">LogOut</NavLink>
+                </li>
             </ul>
             <div class="rightnav v-class-resp">
 <!--                <input type="text" name="search" id="search" placeholder="Search">-->

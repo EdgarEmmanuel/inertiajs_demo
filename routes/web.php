@@ -36,6 +36,8 @@ Route::post('/users', function () {
     return redirect("login");
 });
 
+Route::post('/logout', [\App\Http\Controllers\LoginController::class,'logout'])->name("login.logout");
+
 Route::middleware('auth')->group(function () {
 
 
@@ -74,9 +76,7 @@ Route::middleware('auth')->group(function () {
 
 
 
-    Route::post('/logout', function () {
-        dd("logout users");
-    });
+
 
 
 });
