@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('login', [\App\Http\Controllers\LoginController::class,'create'])->name('login');
+Route::post('login', [\App\Http\Controllers\LoginController::class,'store'])->name('login.post');
+
+Route::get('/users/create', function () {
+    //sleep(3);
+    //return view('welcome');
+    return \Inertia\Inertia::render("Users/Create");
+});
 
 Route::middleware('auth')->group(function () {
 
@@ -63,13 +70,6 @@ Route::middleware('auth')->group(function () {
 
         //redirect
         return redirect("/users/index");
-    });
-
-
-    Route::get('/users/create', function () {
-        //sleep(3);
-        //return view('welcome');
-        return \Inertia\Inertia::render("Users/Create");
     });
 
     Route::post('/logout', function () {

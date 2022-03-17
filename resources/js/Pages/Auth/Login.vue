@@ -6,6 +6,9 @@
         <div class="md:grid md:grid-cols-3 md:gap-6 p-10">
             <div class="md:col-span-1">
                 <div class="px-4 sm:px-0">
+                    <p class="mt-1 text-sm text-gray-600 mb-4 border rounded-lg">
+                        <a href="/users/create">Sign Up</a>
+                    </p>
                     <h3 class="text-lg font-medium leading-6 text-gray-900">SIGN IN</h3>
                 </div>
             </div>
@@ -20,7 +23,7 @@
 <!--                                </div>-->
 
                                 <div class="col-span-6 sm:col-span-4">
-                                    <label for="email-address" class="block text-sm font-medium text-gray-700">Email address</label>
+                                    <label for="email-address" class="block text-sm font-medium text-gray-700">Email</label>
                                     <input v-model="form.email" type="text" name="email-address" id="email-address" autocomplete="email"
                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                                     <div v-if="$page.props.errors.email" v-text="$page.props.errors.email" class="text-red-500"></div>
