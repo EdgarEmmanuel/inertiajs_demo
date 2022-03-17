@@ -66,6 +66,9 @@ Route::middleware('auth')->group(function () {
             "time" => now()->format("Y - m - d h:m:s"),
             "users" => $users,
             "filters" => $thereIsSearchKeyword,
+            "can" => [
+                "createUser" => \Illuminate\Support\Facades\Auth::user()->can('create', \App\Models\User::class)
+            ]
         ]);
     })->name("user_index");
 
